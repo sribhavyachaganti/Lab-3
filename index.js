@@ -34,5 +34,3 @@ function resetCalculator() {
     tipAmountDisplay.innerText = "$0.00";
     totalAmountDisplay.innerText = "$0.00";
 }
-
-
