@@ -8,20 +8,35 @@ bill_total.addEventListener("change", calculateTip);
 slider.addEventListener("input", calculateTip);
 
 function calculateTip() {
+
+
     if (isNaN(bill_total.value) || parseFloat(bill_total.value) <= 0) {
         alert("ENTER A VALID POSITIVE NUMBER");
-        return;
+        return; 
     }
 
-    let tip = parseInt(slider.value);
-    tip_percentage.value = tip + "%";
+    
+    let tip = document.getElementById("tip").value;
+    tip_percentage.value = tip;
 
-    let bill = parseFloat(bill_total.value).toFixed(2);
-    bill_total.value = bill;
+    if ((!isNaN(bill_total.value) && bill_total.value.trim() !== "") || parseFloat(bill_total.value) >= 0) 
+    {
 
-    let total_tip = ((tip * bill) / 100).toFixed(2);
-    tip_amount.value = total_tip;
+        bill_total.value = parseFloat(bill_total.value).toFixed(2);
+        let bill = parseFloat(document.getElementById("bill-total").value);
+    
+    
+        let total_tip = parseFloat(((tip * bill) / 100).toFixed(2));
+        tip_amount.value = total_tip;
 
-    let total_with_tip = (parseFloat(bill) + parseFloat(total_tip)).toFixed(2);
-    total_amount.value = total_with_tip;
+        
+        total_amount.value = parseFloat(bill + total_tip).toFixed(2);
+    } 
+    else 
+    {
+    
+        bill_total.value = "";
+        total_amount.value = ""; 
+        tip_amount.value = "";
+    }
 }
