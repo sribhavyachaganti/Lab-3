@@ -35,3 +35,4 @@ function resetCalculator() {
     totalAmountDisplay.innerText = "$0.00";
 }
 
+
