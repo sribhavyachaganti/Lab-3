@@ -1,66 +1,101 @@
-/* Center and style the container */
+/* Page styling */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
+    background-color: #d5c6e0;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f5f5f5;
 }
 
 #tip_calculate {
-    background-color: #e0e0e0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
+    background-color: #f0e5ff;
+    padding: 30px;
+    border-radius: 15px;
+    width: 350px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
 }
 
 #info {
-    font-size: 14px;
-    color: #555;
-    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #3d3d3d;
+    margin-bottom: 20px;
 }
 
 #headline {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
+    font-size: 26px;
+    color: #3d3d3d;
+    margin: 10px 0 20px;
 }
 
 .form-label {
     display: block;
-    font-weight: bold;
+    font-size: 16px;
     margin: 10px 0 5px;
+    color: #3d3d3d;
     text-align: left;
 }
 
 .form-input {
     width: 100%;
     padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #c1b6de;
+    border-radius: 8px;
     box-sizing: border-box;
+    text-align: right;
 }
 
 input[type="range"] {
     width: 100%;
-    -webkit-appearance: none;
+    margin: 10px 0;
     appearance: none;
-    height: 8px;
-    background: #333;
+    height: 5px;
+    background: #6c63ff;
     border-radius: 5px;
-    outline: none;
 }
 
 input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
     appearance: none;
     width: 16px;
     height: 16px;
-    background: #555;
+    background: #4a42a3;
     cursor: pointer;
     border-radius: 50%;
 }
+
+.result-box {
+    background-color: #a99adb;
+    padding: 20px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.result-box p {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #b49fc8;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reset-button:hover {
+    background-color: #937bbf;
+}
+
